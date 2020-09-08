@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="visual"
+        android:icon="@mipmap/ic_visibility_white_24dp"
+        android:title="@string/visual_identity"
+        android:summary="@string/modify_visual_elements"/>
+
+    <Preference
+        android:key="info"
+        android:icon="@mipmap/ic_info_white_24dp"
+        android:title="@string/info"
+        android:summary="@string/modify_showcase_info"/>
+
+    <Preference
+        android:key="admin"
+        android:icon="@mipmap/ic_assignment_white_24dp"
+        android:title="@string/administration"
+        android:summary="@string/modify_showcase_managment"/>
+
+</PreferenceScreen>

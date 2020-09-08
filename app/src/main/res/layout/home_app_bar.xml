@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.main_activities.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:id="@+id/main_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/toolbar_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/skyblue"
+                    android:src="@mipmap/ic_menu_white_24dp"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/seven_dp"
+                    app:srcCompat="@drawable/afrikett_logo_trans" />
+
+                <ImageView
+                    android:id="@+id/toolbar_to_manage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/fab_margin"
+                    android:tint="@color/skyblue"
+                    android:src="@mipmap/ic_store_white_24dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/profile_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/toolbar_name"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/toolbar_profile_tools"
+                    android:layout_toLeftOf="@+id/toolbar_profile_tools"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/fab_margin"
+                    android:id="@+id/toolbar_profile_tools">
+
+                    <ImageView
+                        android:id="@+id/toolbar_to_favorites_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/current_margin_2"
+                        android:layout_marginRight="@dimen/current_margin_2"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:tint="@color/skyblue"
+                        android:src="@mipmap/ic_shopping_cart_white_24dp" />
+
+                    <ImageView
+                        android:id="@+id/toolbar_to_favorites_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/current_margin_2"
+                        android:layout_marginRight="@dimen/current_margin_2"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:tint="@color/skyblue"
+                        android:src="@mipmap/ic_bookmark_border_white_24dp" />
+
+                    <ImageView
+                        android:id="@+id/toolbar_to_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:tint="@color/skyblue"
+                        android:src="@mipmap/ic_build_white_24dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/messenger_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/discussions"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbar_messenger_title"
+                    android:layout_toLeftOf="@+id/toolbar_to_messenger_search"
+                    android:layout_toStartOf="@+id/toolbar_to_messenger_search"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_to_messenger_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/fab_margin"
+                    android:tint="@color/skyblue"
+                    android:src="@mipmap/ic_search_white_24dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/notifications_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/notifications"
+                    android:textColor="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbar_notifications_title"
+                    android:layout_toLeftOf="@+id/toolbar_to_open_notifications_menu"
+                    android:layout_toStartOf="@+id/toolbar_to_open_notifications_menu"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_to_open_notifications_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/fab_margin"
+                    android:tint="@color/skyblue"
+                    android:src="@mipmap/ic_more_vert_white_24dp" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/home_content" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/overlay_top"
+        android:background="@color/orange"
+        app:srcCompat="@mipmap/ic_chat_white_24dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/skyblue"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@drawable/bottom_nav_item_color"
+        app:itemTextColor="@color/transparent"
+        app:menu="@menu/activity_home_bottom_nav"
+        app:labelVisibilityMode="unlabeled"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

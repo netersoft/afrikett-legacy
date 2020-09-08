@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkorange"
+    tools:context=".ui.activities.showcase_activities.registration.FirstStepActivity">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminate="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:progress="1"
+        android:max="4"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/zero_dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/overlay_top_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/identify_ur_structure"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="@dimen/zero_dp"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:layout_marginTop="@dimen/current_margin"
+            android:layout_marginRight="@dimen/current_margin"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:ems="10"
+                android:id="@+id/name"
+                android:inputType="text"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/name_of_showcase"
+                android:textColor="@color/dimgray"
+                android:background="@android:color/transparent"
+                tools:ignore="Autofill" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="@dimen/zero_dp"
+            android:layout_marginBottom="@dimen/current_margin"
+            android:layout_marginRight="@dimen/current_margin"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/ten_dp"
+                android:paddingEnd="@dimen/ten_dp"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingLeft="@dimen/ten_dp"
+                android:paddingTop="@dimen/five_dp"
+                android:paddingBottom="@dimen/five_dp">
+
+                <EditText
+                    android:ems="10"
+                    android:lines="3"
+                    android:minLines="3"
+                    android:maxLines="4"
+                    android:maxLength="260"
+                    android:gravity="top|start"
+                    android:id="@+id/description"
+                    android:inputType="textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/description_of_showcase"
+                    android:textColor="@color/dimgray"
+                    android:background="@android:color/transparent"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/two_dp"
+                    android:id="@+id/description_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dimgray"
+                    android:layout_gravity="end"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:text="@string/next"
+        android:textColor="@color/orange"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_button"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:layout_marginRight="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

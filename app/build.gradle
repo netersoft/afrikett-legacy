@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.neteru.afrikett"
+        minSdkVersion 16
+        targetSdkVersion 29
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0-alpha02'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.0"
+    implementation 'com.google.android.material:material:1.3.0-alpha02'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.exifinterface:exifinterface:1.2.0'
+    implementation 'com.github.paolorotolo:appintro:v5.1.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'io.github.inflationx:calligraphy3:3.0.0'
+    implementation 'io.github.inflationx:viewpump:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'net.rimoto:intlphoneinput:1.0.1'
+    implementation 'com.jaredrummler:colorpicker-compat:1.0.5'
+    implementation 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    implementation 'com.vanniktech:emoji-ios:0.5.1'
+    implementation 'com.github.Kennyc1012:BottomSheet:2.4.1'
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.2.0'
+    implementation 'com.github.broakenmedia:MultiContactPicker:1.8.5'
+    implementation 'com.github.vihtarb:tooltip:0.2.0'
+    implementation 'com.dinuscxj:circleprogressbar:1.3.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
+    implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
+    implementation 'com.github.shts:StoriesProgressView:3.0.0'
+    implementation 'com.schibstedspain.android:leku:6.4.0'
+    implementation 'ja.burhanrashid52:photoeditor:0.4.0'
+    implementation 'com.github.MikeOrtiz:TouchImageView:2.1.1'
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+    implementation 'com.github.takusemba:spotlight:1.8.0'
+    implementation group: 'com.j256.ormlite', name: 'ormlite-android', version: '5.1'
+
+    implementation 'com.google.firebase:firebase-core:17.5.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.google.firebase:firebase-database:19.4.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.guava:guava:27.0.1-android'
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

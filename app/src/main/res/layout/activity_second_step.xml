@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skyblue"
+    tools:context=".ui.activities.showcase_activities.registration.SecondStepActivity">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminate="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:progress="2"
+        android:max="4"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/zero_dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/overlay_top_2"
+        android:layout_marginLeft="@dimen/current_margin"
+        android:layout_marginRight="@dimen/current_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:gravity="start"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/second_step_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/current_margin"/>
+
+        <com.neteru.afrikett.core.utilities.RecursiveRadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_marginRight="@dimen/current_margin"
+            android:layout_marginTop="@dimen/current_margin"
+            android:orientation="horizontal"
+            android:id="@+id/field">
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/agro"
+                    android:id="@+id/rd_1_1"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/information_science"
+                    android:id="@+id/rd_1_2"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/fashion_and_clothing"
+                    android:id="@+id/rd_1_3"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/communication"
+                    android:id="@+id/rd_1_4"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/entertainment"
+                    android:id="@+id/rd_1_5"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/education_and_training"
+                    android:id="@+id/rd_1_6"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/finance_and_banking"
+                    android:id="@+id/rd_1_7"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/transport_and_logistics"
+                    android:id="@+id/rd_1_8"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/trade_and_distribution"
+                    android:id="@+id/rd_2_1"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/public_services"
+                    android:id="@+id/rd_2_2"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/hotel_business"
+                    android:id="@+id/rd_2_3"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/health"
+                    android:id="@+id/rd_2_4"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/professional_services"
+                    android:id="@+id/rd_2_5"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/retail_sale"
+                    android:id="@+id/rd_2_6"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/catering"
+                    android:id="@+id/rd_2_7"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/current_margin"
+                    android:text="@string/other"
+                    android:id="@+id/rd_2_8"
+                    android:checked="false"
+                    app:buttonTint="@color/white"/>
+
+            </LinearLayout>
+
+        </com.neteru.afrikett.core.utilities.RecursiveRadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:text="@string/next"
+        android:layout_width="150dp"
+        android:textColor="@color/skyblue"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_button"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:layout_marginRight="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

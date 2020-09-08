@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skyblue"
+    tools:context=".ui.activities.showcase_activities.registration.FourthStepActivity">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminate="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:progress="4"
+        android:max="4"/>
+
+    <LinearLayout
+        android:id="@+id/first_linear"
+        android:layout_width="@dimen/zero_dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/overlay_top_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/fourth_step_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/banner"
+                android:scaleType="centerCrop"
+                android:layout_height="150dp"
+                android:layout_width="match_parent"
+                android:contentDescription="@string/banner"
+                android:background="@color/silver"/>
+
+            <ImageView
+                android:id="@+id/action_banner"
+                android:paddingBottom="40dp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_camera_alt_white_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:text="@string/banner_uppercase"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/three_dp"/>
+
+            <TextView
+                android:text="@string/logo_uppercase"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/current_margin"
+                android:layout_marginLeft="@dimen/current_margin"
+                android:layout_below="@+id/logoRoot"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/three_dp"/>
+
+            <RelativeLayout
+                android:id="@+id/logoRoot"
+                android:layout_marginTop="110dp"
+                android:layout_marginStart="@dimen/current_margin"
+                android:layout_marginLeft="@dimen/current_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.neteru.afrikett.core.utilities.RoundedImageView
+                    android:id="@+id/logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="@dimen/two_dp"
+                    android:background="@drawable/silver_circle"
+                    android:contentDescription="@string/logo"/>
+
+                <ImageView
+                    android:id="@+id/action_logo"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_camera_alt_white_24dp"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/first_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/overlay_top_2"
+        android:layout_marginStart="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"
+        app:layout_constraintTop_toBottomOf="@+id/first_linear">
+
+        <RelativeLayout
+            android:padding="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="start"
+                android:text="@string/primary_color"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/skyblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:id="@+id/pColor"
+                android:background="@color/skyblue"
+                android:layout_width="@dimen/current_margin_2"
+                android:layout_height="@dimen/current_margin_2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/second_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginStart="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"
+        app:layout_constraintTop_toBottomOf="@+id/first_cardView">
+
+        <RelativeLayout
+            android:padding="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="start"
+                android:text="@string/second_color"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/skyblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:id="@+id/sColor"
+                android:background="@color/orange"
+                android:layout_width="@dimen/current_margin_2"
+                android:layout_height="@dimen/current_margin_2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/save"
+        android:text="@string/save"
+        android:textColor="@color/orange"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_button"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:layout_marginRight="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

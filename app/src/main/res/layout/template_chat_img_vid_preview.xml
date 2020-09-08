@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/previewBox"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@drawable/chat_img_vid_item_unchecked_border">
+
+    <ImageView
+        android:id="@+id/previewImg"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:tint="@color/white"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/playButton"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/ic_play_arrow_white_48dp"
+        android:background="@drawable/transparent_black_circle"
+        android:layout_gravity="center_vertical|center_horizontal"
+        tools:ignore="ContentDescription" />
+
+</RelativeLayout>

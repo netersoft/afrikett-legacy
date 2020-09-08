@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitesmoke"
+    android:id="@+id/box_root"
+    tools:context=".ui.activities.messenger_activities.ChatBoxActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/box_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/box_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/box_profile_picture"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:id="@+id/box_profile_info"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/box_profile_picture"
+                    android:layout_toRightOf="@+id/box_profile_picture"
+                    android:layout_marginStart="@dimen/three_dp"
+                    android:layout_marginLeft="@dimen/three_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/skyblue"
+                        android:id="@+id/box_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+                    <TextView
+                        android:textColor="@color/dodgerblue"
+                        android:layout_marginTop="@dimen/three_dp"
+                        android:id="@+id/box_profile_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:divider="@null"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:padding="@dimen/three_dp"
+        android:id="@+id/box_message_recycler"
+        android:dividerHeight="@dimen/three_dp"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/box_bottom_editor"
+        app:layout_constraintTop_toBottomOf="@id/box_app_bar_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/box_bottom_editor"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/five_dp"
+        android:paddingStart="@dimen/five_dp"
+        android:paddingEnd="@dimen/five_dp"
+        android:paddingRight="@dimen/five_dp"
+        android:layout_marginBottom="@dimen/eight_dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/zero_dp"
+            android:layout_weight=".70"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/five_dp"
+            android:layout_marginEnd="@dimen/five_dp"
+            android:layout_marginBottom="@dimen/one_dp"
+            android:layout_marginTop="@dimen/one_dp"
+            app:cardCornerRadius="@dimen/five_dp"
+            app:cardElevation="1dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <ImageButton
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_weight=".15"
+                    android:background="@drawable/white_circle_button"
+                    android:id="@+id/box_emoji_button"
+                    app:srcCompat="@mipmap/ic_mood_white_24dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/skyblue"
+                    tools:ignore="ContentDescription" />
+
+                <com.vanniktech.emoji.EmojiEditText
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_weight=".65"
+                    android:hint="@string/ur_message"
+                    android:id="@+id/box_message_field"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionSend"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:background="@color/transparent"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:maxLines="5"/>
+
+                <ImageButton
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_weight=".15"
+                    android:background="@drawable/white_circle_button"
+                    android:id="@+id/box_attach_button"
+                    app:srcCompat="@mipmap/ic_attach_file_white_24dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/skyblue"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="1dp"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_weight=".15"
+            app:cardCornerRadius="@dimen/five_dp"
+            android:layout_marginBottom="@dimen/one_dp"
+            android:layout_marginTop="@dimen/one_dp"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/box_send_button"
+                android:background="@drawable/white_circle_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/ic_send_white_24dp"
+                android:tint="@color/skyblue"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/current_margin"
+        android:id="@+id/box_bottom_block_message"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:text="@string/block_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/five_dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

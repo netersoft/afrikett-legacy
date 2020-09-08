@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.others_activities.HelpActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/assistant"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_assistant"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/report_problem"
+            android:textColor="@color/skyblue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/report_problem"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_marginRight="@dimen/current_margin"
+            android:background="@drawable/skyblue_button_bg_stroke"/>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/contact_by_mail"
+            android:textColor="@color/skyblue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_us_by_email"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_marginRight="@dimen/current_margin"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:background="@drawable/skyblue_button_bg_stroke"/>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/privacy_policy"
+            android:textColor="@color/skyblue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_marginRight="@dimen/current_margin"
+            android:layout_marginBottom="@dimen/current_margin"
+            android:background="@drawable/skyblue_button_bg_stroke"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

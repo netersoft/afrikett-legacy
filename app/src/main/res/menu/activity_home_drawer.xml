@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/showcases">
+        <menu>
+            <item
+                android:id="@+id/nav_add"
+                android:icon="@mipmap/ic_add_white_24dp"
+                android:title="@string/add" />
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@mipmap/outline_assignment_white_24"
+                android:title="@string/manage" />
+        </menu>
+    </item>
+
+    <item android:title="@string/others">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@mipmap/ic_build_white_24dp"
+                android:title="@string/settings" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@mipmap/ic_live_help_white_24dp"
+                android:title="@string/help" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/ic_share_white_24dp"
+                android:title="@string/share" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@mipmap/ic_info_white_24dp"
+                android:title="@string/about" />
+        </menu>
+    </item>
+
+</menu>

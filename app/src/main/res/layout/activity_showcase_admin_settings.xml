@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.showcase_activities.overview.admin.settings.ShowcaseAdminSettingsActivity">
+
+    <TextView
+        android:focusable="true"
+        android:clickable="true"
+        android:id="@+id/delete_box"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/current_margin"
+        android:drawableLeft="@mipmap/ic_delete_white_24dp"
+        android:drawableStart="@mipmap/ic_delete_white_24dp"
+        android:drawablePadding="@dimen/current_margin"
+        android:text="@string/definitively_delete_showcase"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/delete_box"
+        android:id="@+id/header_info"
+        android:padding="@dimen/five_dp"
+        android:textColor="@color/dimgray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/current_margin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="@string/add_admin_header_info"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/header_info"
+        android:id="@+id/main_admin_title"
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/current_margin"
+        android:paddingStart="@dimen/current_margin"
+        android:paddingEnd="@dimen/zero_dp"
+        android:paddingRight="@dimen/zero_dp"
+        android:paddingTop="@dimen/five_dp"
+        android:paddingBottom="@dimen/five_dp"
+        android:text="@string/main_admin"/>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/main_admin_title"
+        android:id="@+id/main_admin_box"
+        android:paddingTop="@dimen/eight_dp"
+        android:paddingBottom="@dimen/eight_dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/admin_box_img"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/desc"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"/>
+
+        <RelativeLayout
+            android:paddingTop="2.5dp"
+            android:paddingBottom="2.5dp"
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/admin_box_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/admin_box_actions"
+                android:layout_toLeftOf="@+id/admin_box_actions"/>
+
+            <TextView
+                android:textSize="13sp"
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/admin_box_actions"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/main_admin_box"
+        android:id="@+id/secondary_admin_title"
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/current_margin"
+        android:paddingStart="@dimen/current_margin"
+        android:paddingEnd="@dimen/zero_dp"
+        android:paddingRight="@dimen/zero_dp"
+        android:paddingTop="@dimen/five_dp"
+        android:paddingBottom="@dimen/five_dp"
+        android:layout_marginBottom="@dimen/current_margin"
+        android:text="@string/second_admins"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/secondary_admin_title"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

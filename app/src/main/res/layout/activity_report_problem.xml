@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.others_activities.help.ReportProblemActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/overlay_top_2">
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="@dimen/zero_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/whitesmoke"
+                app:layout_constraintTop_toBottomOf="@+id/assistant"
+                android:layout_marginBottom="@dimen/current_margin"
+                android:layout_marginRight="@dimen/current_margin"
+                android:layout_marginLeft="@dimen/current_margin">
+
+                <EditText
+                    android:ems="10"
+                    android:lines="3"
+                    android:minLines="4"
+                    android:maxLines="6"
+                    android:maxLength="260"
+                    android:gravity="top|start"
+                    android:id="@+id/description"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/dimgray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/describe_ur_problem"
+                    android:padding="@dimen/five_dp"
+                    android:background="@android:color/transparent"
+                    tools:ignore="Autofill" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/send"
+                android:textAllCaps="false"
+                android:text="@string/send"
+                android:textColor="@color/skyblue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/current_margin"
+                android:layout_marginRight="@dimen/current_margin"
+                android:layout_marginBottom="@dimen/current_margin"
+                android:background="@drawable/skyblue_button_bg_stroke"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

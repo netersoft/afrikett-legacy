@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.showcase_activities.overview.admin.settings.ShowcaseVisualSettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/banner_and_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/banner"
+            android:scaleType="centerCrop"
+            android:layout_height="150dp"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/banner"
+            android:background="@color/silver"/>
+
+        <ImageView
+            android:id="@+id/action_banner"
+            android:paddingBottom="50dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_camera_alt_white_24dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:text="@string/banner_uppercase"
+            android:textColor="@color/skyblue"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three_dp"/>
+
+        <TextView
+            android:text="@string/logo_uppercase"
+            android:gravity="center"
+            android:textColor="@color/skyblue"
+            android:layout_marginStart="@dimen/current_margin"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_below="@+id/logoRoot"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/three_dp"/>
+
+        <RelativeLayout
+            android:id="@+id/logoRoot"
+            android:layout_marginTop="110dp"
+            android:layout_marginStart="@dimen/current_margin"
+            android:layout_marginLeft="@dimen/current_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.neteru.afrikett.core.utilities.RoundedImageView
+                android:id="@+id/logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="@dimen/two_dp"
+                android:background="@drawable/silver_circle"
+                android:contentDescription="@string/logo"/>
+
+            <ImageView
+                android:id="@+id/action_logo"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_camera_alt_white_24dp"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/first_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/overlay_top_2"
+        android:layout_marginStart="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"
+        app:layout_constraintTop_toBottomOf="@+id/banner_and_logo"
+        app:cardBackgroundColor="@color/whitesmoke">
+
+        <RelativeLayout
+            android:padding="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="start"
+                android:text="@string/primary_color"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/skyblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:id="@+id/pColor"
+                android:background="@color/skyblue"
+                android:layout_width="@dimen/current_margin_2"
+                android:layout_height="@dimen/current_margin_2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/second_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginStart="@dimen/current_margin"
+        android:layout_marginEnd="@dimen/current_margin"
+        app:layout_constraintTop_toBottomOf="@+id/first_cardView"
+        app:cardBackgroundColor="@color/whitesmoke">
+
+        <RelativeLayout
+            android:padding="@dimen/current_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="start"
+                android:text="@string/second_color"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/skyblue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <View
+                android:id="@+id/sColor"
+                android:background="@color/orange"
+                android:layout_width="@dimen/current_margin_2"
+                android:layout_height="@dimen/current_margin_2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

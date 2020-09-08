@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:id="@+id/rootView"
+    tools:context=".ui.activities.showcase_activities.stories.StoriesViewerSingleSourceActivity">
+
+    <jp.shts.android.storiesprogressview.StoriesProgressView
+        android:id="@+id/storyProgress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/three_dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/eight_dp" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="@null"
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="@dimen/zero_dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:contentInsetStartWithNavigation="@dimen/zero_dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/storyAuthorImg"
+                    android:src="@mipmap/afrikett_launcher"
+                    android:contentDescription="@string/desc" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:id="@+id/storyAuthorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/three_dp"
+                    android:layout_marginRight="@dimen/three_dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:text="@string/dash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/storyPublishDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whitesmoke"
+                    android:layout_marginLeft="@dimen/three_dp"
+                    android:layout_marginRight="@dimen/three_dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.ortiz.touchview.TouchImageView
+        android:id="@+id/storyImg"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:id="@+id/view_counter_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/five_dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:tint="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_visibility_white_24dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:text="0"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/story_view_counter"
+            android:layout_marginLeft="@dimen/three_dp"
+            android:layout_marginStart="@dimen/three_dp"
+            android:layout_marginRight="@dimen/current_margin"
+            android:layout_marginEnd="@dimen/current_margin"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

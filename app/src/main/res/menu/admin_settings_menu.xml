@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/add_admin"
+        android:id="@+id/action_add_admin"
+        android:icon="@mipmap/ic_person_add_white_24dp"
+        app:iconTint="@color/skyblue"
+        app:showAsAction="always" />
+
+</menu>

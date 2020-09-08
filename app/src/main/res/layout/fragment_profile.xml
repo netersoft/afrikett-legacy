@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.home_fragments.ProfileFragment">
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/swiper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshColors="@array/pullRefreshColors">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fragment_profile_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/current_margin"
+                        android:layout_marginLeft="@dimen/current_margin"
+                        android:layout_marginRight="@dimen/current_margin"
+                        android:layout_marginEnd="@dimen/current_margin"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/overlay_top_2"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imgProfile"
+                        android:layout_toEndOf="@id/imgProfile"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/current_margin"
+                        android:layout_marginStart="@dimen/current_margin"
+                        android:layout_marginRight="@dimen/current_margin"
+                        android:layout_marginEnd="@dimen/current_margin"
+                        android:layout_marginTop="@dimen/overlay_top_2">
+
+                        <TextView
+                            android:id="@+id/subscriptionsProfile"
+                            android:text="@string/subscriptions"
+                            android:gravity="start"
+                            android:layout_marginBottom="@dimen/five_dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/showcasesProfile"
+                            android:text="@string/showcases"
+                            android:gravity="start"
+                            android:layout_marginBottom="@dimen/five_dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:id="@+id/modifyProfile"
+                            android:padding="@dimen/five_dp"
+                            android:textColor="@color/gray"
+                            android:textAllCaps="false"
+                            android:text="@string/modify_profile"
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/gray_button_bg_stroke"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/subscriptionsButton"
+                        android:layout_width="@dimen/zero_dp"
+                        android:layout_weight=".50"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_list_white_24dp"
+                        android:tint="@color/gray"
+                        tools:ignore="ContentDescription" />
+
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"/>
+
+                    <ImageButton
+                        android:id="@+id/showcasesButton"
+                        android:layout_width="@dimen/zero_dp"
+                        android:layout_weight=".50"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/outline_assignment_white_24"
+                        android:tint="@color/gray"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    app:backgroundTint="@color/aurore"
+                    android:indeterminateOnly="true" />
+
+                <View
+                    android:background="@color/gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_0"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.neteru.afrikett.core.libs.StateView.StateView
+                        android:id="@+id/status_page_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/overlay_top"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.neteru.afrikett.core.libs.StateView.StateView
+                        android:id="@+id/status_page_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/overlay_top"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.baoyz.widget.PullRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

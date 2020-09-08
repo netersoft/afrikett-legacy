@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/view_statistics"
+        android:id="@+id/action_view_statistics"
+        android:icon="@mipmap/ic_poll_white_24dp"
+        app:iconTint="@color/dimgray"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/account">
+
+        <Preference
+            android:key="email"
+            android:title="@string/email_address" />
+
+        <Preference
+            android:key="phone"
+            android:title="@string/phone" />
+
+        <Preference
+            android:key="mdp"
+            android:title="@string/password" />
+
+        <Preference
+            android:key="disconnect"
+            android:title="@string/to_disconnect"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/notifications">
+
+        <SwitchPreference
+            android:key="notification"
+            android:defaultValue="true"
+            android:title="@string/receive_notifications"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/invitation">
+
+        <Preference
+            android:key="invite"
+            android:title="@string/invite_friends"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/support">
+
+        <Preference
+            android:key="report_problem"
+            android:title="@string/report_problem"/>
+
+        <Preference
+            android:key="contact_us"
+            android:title="@string/contact_us_by_email"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/info">
+
+        <Preference
+            android:key="privacy_policy"
+            android:title="@string/privacy_policy"/>
+
+        <Preference
+            android:key="app_info"
+            android:title="@string/app_informations"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activities.others_activities.settings.general.ChangePhoneNumberActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/current_margin_2"
+        android:layout_marginLeft="@dimen/current_margin"
+        android:layout_marginRight="@dimen/current_margin"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/skyblue"
+            app:hintTextColor="@color/skyblue"
+            android:layout_marginBottom="@dimen/current_margin">
+
+            <net.rimoto.intlphoneinput.IntlPhoneInput
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:textSize="18sp"
+                app:textColor="@color/dimgray"
+                app:flagPaddingEnd="@dimen/six_dp"
+                app:flagPaddingStart="@dimen/four_dp"
+                app:flagPaddingTop="@dimen/two_dp"
+                app:flagPaddingBottom="@dimen/two_dp"
+                android:layout_marginTop="@dimen/two_dp"
+                android:layout_marginBottom="@dimen/two_dp"
+                android:id="@+id/phone_input" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

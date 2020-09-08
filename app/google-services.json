@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "768551287545",
+    "firebase_url": "https://atoum-dd75e.firebaseio.com",
+    "project_id": "atoum-dd75e",
+    "storage_bucket": "atoum-dd75e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768551287545:android:afe832f0aaf9fccb",
+        "android_client_info": {
+          "package_name": "com.neteru.afrikett"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768551287545-rpu0b6j3pl1dvl5hlv3ok4hoq0s13p5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neteru.afrikett",
+            "certificate_hash": "76fe5eae7c2fa40a83be13e2fe46abb476cedb85"
+          }
+        },
+        {
+          "client_id": "768551287545-kbmka0rg5etqdo0gilneh0ttj59t6urd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neteru.afrikett",
+            "certificate_hash": "93f20a50c2a5bab6b86dcbdaa79b3af2bdd27f16"
+          }
+        },
+        {
+          "client_id": "768551287545-tal390sjjq1u5be9mhodja49i2foihsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKD_9jJQv9sf2D2N-1jUVYmBnrtKV0lNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768551287545-tal390sjjq1u5be9mhodja49i2foihsq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

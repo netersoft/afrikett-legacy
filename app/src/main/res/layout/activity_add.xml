@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/skyblue"
+    android:paddingLeft="@dimen/current_margin"
+    android:paddingRight="@dimen/current_margin"
+    android:paddingTop="@dimen/overlay_top"
+    tools:context=".ui.activities.showcase_activities.AddActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:text="@string/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/current_margin"
+            android:layout_marginBottom="@dimen/current_margin"
+            android:textSize="32sp"
+            android:visibility="gone"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/summary"
+            android:textColor="@color/whitesmoke"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/current_margin"
+            android:text="@string/add_showcase_instruction"
+            style="@style/TextAppearance.AppCompat.Medium"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/begin"
+        android:text="@string/begin"
+        android:textColor="@color/skyblue"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/overlay_top"
+        android:background="@drawable/white_button"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
