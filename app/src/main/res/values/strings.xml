@@ -3,7 +3,7 @@
     <string name="app_name">Afrikett</string>
     <string name="app_version_name" translatable="false">v0.01.082</string>
     <string name="app_copyright" translatable="false"><![CDATA[&copy; %1$s Neteru Studio]]></string>
-    <string name="api_key" translatable="false">AIzaSyBKD_9jJQv9sf2D2N-1jUVYmBnrtKV0lNY</string>
+    <string name="api_key" translatable="false">YOUR_GOOGLE_API_KEY</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Ouvrir le panneau de navigation</string>
     <string name="navigation_drawer_close">Fermer le panneau de navigation</string>
