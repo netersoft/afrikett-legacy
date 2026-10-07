@@ -2,3 +2,6 @@
 
 # Firebase config, not committed
 google-services.json
+
+# Release builds, not committed
+/release
